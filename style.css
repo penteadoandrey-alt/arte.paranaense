@@ -1,1 +1,26 @@
+body { 
+    background-color: aqua
+    color: white;
+    font-family: arial, sans-serif;
+}
 
+header  {
+      background-color:aqua
+      color:black
+      text-align: center;
+      padding:  30px
+
+}
+
+h1  {
+    font-siz:  36px;
+}
+
+h2  {
+    color:black;
+}
+
+p  {
+    font-size: 18px;
+    line-height: 1.6;
+}
