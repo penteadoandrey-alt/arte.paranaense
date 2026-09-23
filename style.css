@@ -89,3 +89,23 @@ text-align: center;
 padding: 20px;
 margin-top: 30px;
 }
+
+button {
+    background-color: chartreuse;
+    color: ghostwhite;
+    border: nome;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: brown;
+}
+
+
+.curtir {
+   display: block;
+   width: fit-content;
+
+}
