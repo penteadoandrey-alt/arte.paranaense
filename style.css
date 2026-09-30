@@ -1,13 +1,27 @@
+:root{
+   --cor-fundo:#f4f1ea;
+   --cor-texto:#f80707;
+   --cor-principal:#6b2d5c;
+   --cor-secundaria:#c77dff;
+   --cor-card:;
+   --cor-superficie:white;
+   --coe-rodape:;
+   --cor-clara:white;
+   --cor-legenda:#555555;
+
+}
+
 body {
-background-color: #f4f1ea;
-color: #222222;
+
+background-color: var(--cor-fundo);
+color: var(--cor-texto) ;
 font-family: Arial, sans-serif;
 margin: 0;
 }
 
 header {
-background-color: #6b2d5c;
-color: white;
+background-color: var(--cor-principal);
+color: var(--cor-clara);
 text-align: center;
 padding: 30px;
 }
@@ -17,7 +31,7 @@ font-size: 36px;
 }
 
 h2 {
-color: #6b2d5c;
+color: var(--cor-principal);
 }
 
 p {
@@ -30,9 +44,9 @@ margin-top: 20px;
 }
 
 nav a {
-color: white;
+color: var(--cor-clara);
 text-decoration: none;
-background-color: #9b4d83;
+background-color: var(--cor-secundaria);
 padding: 10px 15px;
 border-radius: 8px;
 margin: 5px;
@@ -40,7 +54,7 @@ display: inline-block;
 }
 
 nav a:hover {
-background-color: #c77dff;
+background-color: var (--cor-secundaria);
 }
 
 main {
@@ -49,7 +63,7 @@ margin: auto;
 }
 
 section {
-background-color: white;
+background-color: var(--cor-superficie);
 margin: 20px 0;
 padding: 20px;
 border-radius: 12px;
@@ -66,7 +80,7 @@ border-radius: 12px;
 figcaption {
 text-align: center;
 font-size: 14px;
-color: #555555;
+color: var(--cor);
 margin-top: 8px;
 }
 
