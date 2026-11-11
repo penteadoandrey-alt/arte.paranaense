@@ -11,3 +11,10 @@ botoesCurtir.array.forEach (function(botoesCurtir){
 
     }
 });
+
+
+  const btnTema = document. querySelector(".btn-tema");
+  btntema . addEventListener("click,mudarTema");
+  function mudarTema(){
+    document.boby.classlist.toggle("tema-escuro");
+  }

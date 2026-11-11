@@ -12,6 +12,17 @@
 
 }
    */
+.tema-escuro {
+   --cor-fundo:#121212;
+   --cor-texto: #f5f5f5;
+   --cor-principal: green;
+   --cor-superfice: #1e1e1e;
+   --cor-car: #2b2530;
+   
+
+
+
+}
 
 body {
 
@@ -136,4 +147,14 @@ button:hover {
    display: flex;
    gap: 20px;
    flex-wrap: wrap;
+}
+.btn-tema {
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   font-size: 22px;
+
 }
