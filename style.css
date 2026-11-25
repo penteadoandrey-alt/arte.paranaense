@@ -4,7 +4,6 @@
     --cor-texto: #222222;
     --cor-principal: #6b2d5c;
     --cor-hover: #9b4d83;
-    --cor-clara: #ffffff;
     --cor-card: #ffffff;
 }
 
@@ -109,11 +108,13 @@ p {
 }
 
 section img {
+    display: block;
     width: 100%;
-    max-height: 420px;
+    max-width: 750px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 10px;
-    margin: 15px 0;
+    margin: 20px auto;
+    border-radius: 12px;
 }
 
 .curtir {
@@ -149,7 +150,6 @@ body.escuro {
     --cor-card: #333333;
     --cor-principal: #c17bab;
     --cor-hover: #9b4d83;
-    --cor-clara: #ffffff;
 }
 
 body.escuro .card {
@@ -179,5 +179,9 @@ body.escuro .card {
 
     h2 {
         font-size: 25px;
+    }
+
+    section img {
+        height: 250px;
     }
 }
