@@ -30,3 +30,4 @@ botoesCurtir.forEach(function (botao) {
         }
     });
 });
+

@@ -129,6 +129,8 @@ footer {
     margin-top: 30px;
 }
 
+/* BOTÃO DE MODO CLARO E ESCURO */
+
 #tema {
     position: fixed;
     bottom: 20px;
@@ -143,6 +145,7 @@ footer {
     cursor: pointer;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     transition: 0.3s;
+    z-index: 1000;
 }
 
 #tema:hover {
@@ -205,3 +208,4 @@ body.escuro footer {
         height: 240px;
     }
 }
+
