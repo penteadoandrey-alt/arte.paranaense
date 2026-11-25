@@ -1,67 +1,32 @@
 
-/* SISTEMA DE CURTIDAS */
+const botaoTema = document.getElementById("tema");
 
-const botoesCurtir = document.querySelectorAll(".curtir");
-
-botoesCurtir.forEach((botao) => {
-
-    let curtidas = 0;
-    let jaCurtiu = false;
-
-    botao.innerHTML = `
-        <span class="icone-curtir">♡</span>
-        <span class="texto-curtir">Curtir</span>
-        <span class="contador-curtir">(0)</span>
-    `;
-
-    botao.setAttribute("aria-pressed", "false");
-
-    botao.addEventListener("click", () => {
-
-        jaCurtiu = !jaCurtiu;
-        curtidas = jaCurtiu ? 1 : 0;
-
-        botao.classList.toggle("curtido", jaCurtiu);
-
-        botao.querySelector(".icone-curtir").textContent =
-            jaCurtiu ? "♥" : "♡";
-
-        botao.querySelector(".texto-curtir").textContent =
-            jaCurtiu ? "Curtido" : "Curtir";
-
-        botao.querySelector(".contador-curtir").textContent =
-            `(${curtidas})`;
-
-        botao.setAttribute("aria-pressed", String(jaCurtiu));
-
-    });
-
-});
-
-/* MODO CLARO E ESCURO */
-
-const botaoTema = document.querySelector(".btn-tema");
-
-botaoTema.addEventListener("click", () => {
-
+botaoTema.addEventListener("click", function () {
     document.body.classList.toggle("escuro");
 
     if (document.body.classList.contains("escuro")) {
-
         botaoTema.textContent = "☀️";
-        botaoTema.setAttribute(
-            "aria-label",
-            "Ativar modo claro"
-        );
-
     } else {
-
         botaoTema.textContent = "🌙";
-        botaoTema.setAttribute(
-            "aria-label",
-            "Ativar modo escuro"
-        );
-
     }
+});
 
+// BOTÕES DE CURTIR
+
+const botoesCurtir = document.querySelectorAll(".curtir");
+
+botoesCurtir.forEach(function (botao) {
+    let curtido = false;
+
+    botao.addEventListener("click", function () {
+        curtido = !curtido;
+
+        if (curtido) {
+            botao.textContent = "♥ Curtido (1)";
+            botao.classList.add("ativo");
+        } else {
+            botao.textContent = "♡ Curtir (0)";
+            botao.classList.remove("ativo");
+        }
+    });
 });

@@ -5,112 +5,90 @@
     --cor-principal: #49bddd;
     --cor-titulo: #1684b7;
     --cor-menu: #00365f;
-    --cor-card: #ffffff;
+    --cor-superficie: #ffffff;
+    --cor-borda: #dddddd;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
     scroll-behavior: smooth;
-    scroll-padding-top: 20px;
 }
 
 body {
-    background-color: var(--cor-fundo);
+    background: var(--cor-fundo);
     color: var(--cor-texto);
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+    transition: 0.3s;
 }
 
-/* CABEÇALHO */
-
 header {
-    background-color: var(--cor-principal);
-    color: var(--cor-titulo);
+    background: var(--cor-principal);
+    color: white;
     text-align: center;
-    padding: 38px 20px 35px;
+    padding: 35px 15px;
 }
 
 header h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 8px;
 }
 
 header p {
-    color: #167bb0;
-    font-size: 19px;
-    margin-bottom: 27px;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
-/* MENU */
-
 nav {
+    background: var(--cor-menu);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 12px;
+    padding: 15px;
 }
 
 nav a {
-    background-color: var(--cor-menu);
-    color: #36b9e7;
+    color: white;
     text-decoration: none;
-    padding: 11px 17px;
-    border-radius: 9px;
-    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 20px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: #075486;
-    color: white;
-    transform: translateY(-2px);
+    background: var(--cor-principal);
 }
 
-/* CONTEÚDO */
-
 main {
-    width: 94%;
-    max-width: 1250px;
-    margin: 35px auto;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 15px;
 }
 
 section {
-    background-color: var(--cor-card);
-    padding: 35px;
-    margin-bottom: 30px;
+    background: var(--cor-superficie);
+    padding: 25px;
+    margin-bottom: 25px;
     border-radius: 12px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
 }
 
-h2 {
-    color: var(--cor-principal);
-    font-size: 29px;
-    margin-bottom: 10px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #d9edf4;
-}
-
-h3 {
+section h2 {
     color: var(--cor-titulo);
-    font-size: 23px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    font-size: 25px;
 }
 
-p {
-    font-size: 19px;
-    line-height: 1.9;
-    margin-top: 15px;
+section p {
+    margin-top: 12px;
+    font-size: 17px;
+    text-align: justify;
 }
-
-/* IMAGENS */
 
 section img {
     display: block;
@@ -118,113 +96,57 @@ section img {
     max-width: 850px;
     height: 380px;
     object-fit: cover;
-    margin: 20px auto 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
-}
-
-/* BOTÃO DE CURTIR */
-
-button {
-    font-family: Arial, sans-serif;
-    cursor: pointer;
+    border-radius: 10px;
+    margin: 15px auto;
 }
 
 .curtir {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    margin: 10px 0 15px;
-    padding: 8px 14px;
+    display: block;
     background: transparent;
-    color: #555;
-    border: 1px solid #d8d8d8;
+    color: #777777;
+    border: 1px solid #aaaaaa;
     border-radius: 8px;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
     font-size: 15px;
-    font-weight: 600;
-    transition: 0.2s ease;
-}
-
-.icone-curtir {
-    font-size: 23px;
-    line-height: 1;
-    color: #777;
-    transition: transform 0.2s, color 0.2s;
+    transition: 0.2s;
 }
 
 .curtir:hover {
-    background-color: #f5f5f5;
-    border-color: #bdbdbd;
+    background: #eeeeee;
 }
 
-.curtir:hover .icone-curtir {
-    transform: scale(1.15);
+.curtir.ativo {
+    color: #d62828;
+    border-color: #d62828;
 }
-
-.curtir.curtido {
-    color: #e53950;
-    border-color: #e8a0aa;
-    background-color: #fff5f6;
-}
-
-.curtir.curtido .icone-curtir {
-    color: #e53950;
-}
-
-/* CURIOSIDADES */
-
-.card {
-    background-color: #f1f6f8;
-    padding: 25px;
-    margin: 22px 0;
-    border-radius: 10px;
-    border-left: 5px solid var(--cor-principal);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateX(4px);
-}
-
-/* RODAPÉ */
 
 footer {
-    background-color: #00365f;
+    background: var(--cor-menu);
     color: white;
     text-align: center;
-    padding: 28px 20px;
+    padding: 20px;
+    margin-top: 30px;
 }
 
-footer p {
-    font-size: 16px;
-    margin: 0;
-}
-
-/* BOTÃO DE TEMA */
-
-.btn-tema {
+#tema {
     position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background-color: #ed1c24;
-    color: white;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
     border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    padding: 0;
-    z-index: 9999;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    background: #d62828;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     transition: 0.3s;
 }
 
-.btn-tema:hover {
-    background-color: #c91620;
+#tema:hover {
     transform: scale(1.08);
 }
 
@@ -233,134 +155,54 @@ footer p {
 body.escuro {
     --cor-fundo: #1e1e1e;
     --cor-texto: #eeeeee;
-    --cor-card: #303030;
+    --cor-superficie: #303030;
     --cor-titulo: #73d0ee;
+    --cor-menu: #111111;
 }
 
 body.escuro header {
-    background-color: #202b35;
-    color: white;
+    background: #202c35;
 }
 
-body.escuro header h1,
-body.escuro header p {
-    color: white;
-}
-
-body.escuro nav a {
-    background-color: #101c29;
-    color: #65c9ed;
-}
-
-body.escuro nav a:hover {
-    background-color: #28516d;
-    color: white;
+body.escuro nav {
+    background: #111111;
 }
 
 body.escuro section {
-    background-color: #303030;
-    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-body.escuro h2,
-body.escuro h3 {
-    color: #73d0ee;
-}
-
-body.escuro h2 {
-    border-bottom-color: #454545;
-}
-
-body.escuro section p {
-    color: #eeeeee;
-}
-
-body.escuro .card {
-    background-color: #3b3b3b;
-    border-left-color: #49bddd;
+body.escuro .curtir:hover {
+    background: #444444;
 }
 
 body.escuro footer {
-    background-color: #101c29;
+    background: #111111;
 }
-
-/* CURTIDAS NO MODO ESCURO */
-
-body.escuro .curtir {
-    color: #eeeeee;
-    border-color: #666;
-    background: transparent;
-}
-
-body.escuro .curtir .icone-curtir {
-    color: #ccc;
-}
-
-body.escuro .curtir.curtido {
-    color: #ff7185;
-    border-color: #a94b5b;
-    background-color: #442b30;
-}
-
-body.escuro .curtir.curtido .icone-curtir {
-    color: #ff7185;
-}
-
-/* CELULAR */
 
 @media (max-width: 600px) {
-
-    header {
-        padding: 35px 15px;
-    }
-
     header h1 {
-        font-size: 28px;
-    }
-
-    header p {
-        font-size: 16px;
+        font-size: 25px;
     }
 
     nav {
-        gap: 9px;
+        gap: 5px;
     }
 
     nav a {
+        padding: 7px 10px;
         font-size: 14px;
-        padding: 9px 12px;
-    }
-
-    main {
-        width: 94%;
-        margin: 22px auto;
     }
 
     section {
-        padding: 20px;
-        margin-bottom: 22px;
+        padding: 18px;
     }
 
-    h2 {
-        font-size: 24px;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 17px;
+    section h2 {
+        font-size: 21px;
     }
 
     section img {
         height: 240px;
-    }
-
-    .btn-tema {
-        width: 55px;
-        height: 55px;
-        right: 18px;
-        bottom: 18px;
     }
 }
