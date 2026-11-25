@@ -25,6 +25,8 @@ body {
     transition: 0.3s;
 }
 
+/* CABEÇALHO */
+
 header {
     background-color: var(--cor-principal);
     color: white;
@@ -39,23 +41,6 @@ header h1 {
 
 header p {
     font-size: 20px;
-}
-
-button {
-    background-color: var(--cor-hover);
-    color: white;
-    border: none;
-    padding: 15px 22px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 19px;
-    margin-top: 20px;
-    transition: 0.3s;
-}
-
-button:hover {
-    opacity: 0.85;
-    transform: scale(1.03);
 }
 
 /* MENU */
@@ -117,6 +102,8 @@ p {
     margin-top: 15px;
 }
 
+/* IMAGENS */
+
 section img {
     display: block;
     width: 100%;
@@ -137,6 +124,16 @@ section img {
     font-size: 22px;
     font-weight: bold;
     background-color: #6b2d5c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.curtir:hover {
+    background-color: #9b4d83;
+    transform: scale(1.05);
 }
 
 .curtir.curtido {
@@ -164,6 +161,35 @@ footer {
 
 footer p {
     font-size: 18px;
+}
+
+/* BOTÃO FLUTUANTE DE TEMA */
+
+.btn-tema {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #ed1c24;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    padding: 0;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.btn-tema:hover {
+    transform: scale(1.08);
+    background-color: #d71920;
 }
 
 /* MODO ESCURO */
@@ -212,11 +238,11 @@ body.escuro footer {
 }
 
 body.escuro .btn-tema {
-    background-color: white;
-    color: #222222;
+    background-color: #ed1c24;
+    color: white;
 }
 
-/* TRANSIÇÃO */
+/* TRANSIÇÕES */
 
 body,
 header,
@@ -230,6 +256,7 @@ footer {
 /* CELULAR */
 
 @media (max-width: 600px) {
+
     header h1 {
         font-size: 28px;
     }
@@ -256,5 +283,12 @@ footer {
 
     section img {
         height: 250px;
+    }
+
+    .btn-tema {
+        width: 55px;
+        height: 55px;
+        right: 18px;
+        bottom: 18px;
     }
 }

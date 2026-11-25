@@ -36,9 +36,9 @@ botaoTema.addEventListener("click", () => {
     document.body.classList.toggle("escuro");
 
     if (document.body.classList.contains("escuro")) {
-        botaoTema.innerHTML = "☀️ Modo claro";
+        botaoTema.innerHTML = "☀️";
     } else {
-        botaoTema.innerHTML = "🌙 Alterar tema";
+        botaoTema.innerHTML = "🌗";
     }
 
 });
