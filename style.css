@@ -93,7 +93,7 @@ section {
 h2 {
     color: var(--cor-principal);
     font-size: 29px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-bottom: 12px;
     border-bottom: 2px solid #d9edf4;
 }
@@ -118,7 +118,7 @@ section img {
     max-width: 850px;
     height: 380px;
     object-fit: cover;
-    margin: 25px auto;
+    margin: 20px auto 25px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
 }
@@ -135,13 +135,13 @@ button {
     align-items: center;
     justify-content: center;
     gap: 9px;
-    margin: 25px auto 0;
-    padding: 10px 18px;
+    margin: 10px 0 15px;
+    padding: 8px 14px;
     background: transparent;
     color: #555;
     border: 1px solid #d8d8d8;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     transition: 0.2s ease;
 }
