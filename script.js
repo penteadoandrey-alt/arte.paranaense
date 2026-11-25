@@ -8,25 +8,31 @@ botoesCurtir.forEach((botao) => {
     let curtidas = 0;
     let jaCurtiu = false;
 
+    botao.innerHTML = `
+        <span class="icone-curtir">♡</span>
+        <span class="texto-curtir">Curtir</span>
+        <span class="contador-curtir">(0)</span>
+    `;
+
+    botao.setAttribute("aria-pressed", "false");
+
     botao.addEventListener("click", () => {
 
-        if (jaCurtiu === false) {
+        jaCurtiu = !jaCurtiu;
+        curtidas = jaCurtiu ? 1 : 0;
 
-            curtidas++;
-            jaCurtiu = true;
+        botao.classList.toggle("curtido", jaCurtiu);
 
-            botao.classList.add("curtido");
-            botao.innerHTML = `❤️ Curtido (<span>${curtidas}</span>)`;
+        botao.querySelector(".icone-curtir").textContent =
+            jaCurtiu ? "♥" : "♡";
 
-        } else {
+        botao.querySelector(".texto-curtir").textContent =
+            jaCurtiu ? "Curtido" : "Curtir";
 
-            curtidas--;
-            jaCurtiu = false;
+        botao.querySelector(".contador-curtir").textContent =
+            `(${curtidas})`;
 
-            botao.classList.remove("curtido");
-            botao.innerHTML = `🤍 Curtir (<span>${curtidas}</span>)`;
-
-        }
+        botao.setAttribute("aria-pressed", String(jaCurtiu));
 
     });
 
@@ -43,12 +49,18 @@ botaoTema.addEventListener("click", () => {
     if (document.body.classList.contains("escuro")) {
 
         botaoTema.textContent = "☀️";
-        botaoTema.setAttribute("aria-label", "Ativar modo claro");
+        botaoTema.setAttribute(
+            "aria-label",
+            "Ativar modo claro"
+        );
 
     } else {
 
         botaoTema.textContent = "🌙";
-        botaoTema.setAttribute("aria-label", "Ativar modo escuro");
+        botaoTema.setAttribute(
+            "aria-label",
+            "Ativar modo escuro"
+        );
 
     }
 

@@ -6,7 +6,6 @@
     --cor-titulo: #1684b7;
     --cor-menu: #00365f;
     --cor-card: #ffffff;
-    --cor-curtir: #6b2d5c;
 }
 
 * {
@@ -56,9 +55,6 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     gap: 14px;
-    background: transparent;
-    padding: 0;
-    box-shadow: none;
 }
 
 nav a {
@@ -127,7 +123,7 @@ section img {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
 }
 
-/* CURTIDAS */
+/* BOTÃO DE CURTIR */
 
 button {
     font-family: Arial, sans-serif;
@@ -135,25 +131,45 @@ button {
 }
 
 .curtir {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
     margin: 25px auto 0;
-    padding: 14px 28px;
-    background-color: var(--cor-curtir);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.3s;
+    padding: 10px 18px;
+    background: transparent;
+    color: #555;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.icone-curtir {
+    font-size: 23px;
+    line-height: 1;
+    color: #777;
+    transition: transform 0.2s, color 0.2s;
 }
 
 .curtir:hover {
-    background-color: #9b4d83;
-    transform: translateY(-3px);
+    background-color: #f5f5f5;
+    border-color: #bdbdbd;
+}
+
+.curtir:hover .icone-curtir {
+    transform: scale(1.15);
 }
 
 .curtir.curtido {
-    background-color: #b21f35;
+    color: #e53950;
+    border-color: #e8a0aa;
+    background-color: #fff5f6;
+}
+
+.curtir.curtido .icone-curtir {
+    color: #e53950;
 }
 
 /* CURIOSIDADES */
@@ -185,7 +201,7 @@ footer p {
     margin: 0;
 }
 
-/* BOTÃO REDONDO DE TEMA */
+/* BOTÃO DE TEMA */
 
 .btn-tema {
     position: fixed;
@@ -202,8 +218,6 @@ footer p {
     align-items: center;
     font-size: 25px;
     padding: 0;
-    margin: 0;
-    cursor: pointer;
     z-index: 9999;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
     transition: 0.3s;
@@ -221,7 +235,6 @@ body.escuro {
     --cor-texto: #eeeeee;
     --cor-card: #303030;
     --cor-titulo: #73d0ee;
-    --cor-curtir: #704568;
 }
 
 body.escuro header {
@@ -249,13 +262,13 @@ body.escuro section {
     color: white;
 }
 
-body.escuro h2 {
-    color: #73d0ee;
-    border-bottom-color: #454545;
-}
-
+body.escuro h2,
 body.escuro h3 {
     color: #73d0ee;
+}
+
+body.escuro h2 {
+    border-bottom-color: #454545;
 }
 
 body.escuro section p {
@@ -271,9 +284,26 @@ body.escuro footer {
     background-color: #101c29;
 }
 
-body.escuro .btn-tema {
-    background-color: #ed1c24;
-    color: white;
+/* CURTIDAS NO MODO ESCURO */
+
+body.escuro .curtir {
+    color: #eeeeee;
+    border-color: #666;
+    background: transparent;
+}
+
+body.escuro .curtir .icone-curtir {
+    color: #ccc;
+}
+
+body.escuro .curtir.curtido {
+    color: #ff7185;
+    border-color: #a94b5b;
+    background-color: #442b30;
+}
+
+body.escuro .curtir.curtido .icone-curtir {
+    color: #ff7185;
 }
 
 /* CELULAR */
@@ -334,4 +364,3 @@ body.escuro .btn-tema {
         bottom: 18px;
     }
 }
-
