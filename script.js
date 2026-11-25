@@ -4,30 +4,35 @@
 const botoesCurtir = document.querySelectorAll(".curtir");
 
 botoesCurtir.forEach((botao) => {
+
     let curtidas = 0;
     let jaCurtiu = false;
 
     botao.addEventListener("click", () => {
 
-        if (!jaCurtiu) {
+        if (jaCurtiu === false) {
+
             curtidas++;
             jaCurtiu = true;
 
             botao.classList.add("curtido");
-            botao.innerHTML = `❤️ Curtido (${curtidas})`;
+            botao.innerHTML = `❤️ Curtido (<span>${curtidas}</span>)`;
 
         } else {
+
             curtidas--;
             jaCurtiu = false;
 
             botao.classList.remove("curtido");
-            botao.innerHTML = `🤍 Curtir (${curtidas})`;
+            botao.innerHTML = `🤍 Curtir (<span>${curtidas}</span>)`;
+
         }
 
     });
+
 });
 
-/* MODO ESCURO E CLARO */
+/* MODO CLARO E ESCURO */
 
 const botaoTema = document.querySelector(".btn-tema");
 
@@ -36,9 +41,15 @@ botaoTema.addEventListener("click", () => {
     document.body.classList.toggle("escuro");
 
     if (document.body.classList.contains("escuro")) {
-        botaoTema.innerHTML = "☀️";
+
+        botaoTema.textContent = "☀️";
+        botaoTema.setAttribute("aria-label", "Ativar modo claro");
+
     } else {
-        botaoTema.innerHTML = "🌗";
+
+        botaoTema.textContent = "🌙";
+        botaoTema.setAttribute("aria-label", "Ativar modo escuro");
+
     }
 
 });
