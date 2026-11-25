@@ -1,18 +1,44 @@
 
+/* SISTEMA DE CURTIDAS */
+
 const botoesCurtir = document.querySelectorAll(".curtir");
 
 botoesCurtir.forEach((botao) => {
-    botao.addEventListener("click", () => {
-        const contador = botao.querySelector("span");
-        let curtidas = Number(contador.textContent);
+    let curtidas = 0;
+    let jaCurtiu = false;
 
-        curtidas++;
-        contador.textContent = curtidas;
+    botao.addEventListener("click", () => {
+
+        if (!jaCurtiu) {
+            curtidas++;
+            jaCurtiu = true;
+
+            botao.classList.add("curtido");
+            botao.innerHTML = `❤️ Curtido (${curtidas})`;
+
+        } else {
+            curtidas--;
+            jaCurtiu = false;
+
+            botao.classList.remove("curtido");
+            botao.innerHTML = `🤍 Curtir (${curtidas})`;
+        }
+
     });
 });
+
+/* MODO ESCURO E CLARO */
 
 const botaoTema = document.querySelector(".btn-tema");
 
 botaoTema.addEventListener("click", () => {
+
     document.body.classList.toggle("escuro");
+
+    if (document.body.classList.contains("escuro")) {
+        botaoTema.innerHTML = "☀️ Modo claro";
+    } else {
+        botaoTema.innerHTML = "🌙 Alterar tema";
+    }
+
 });

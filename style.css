@@ -5,6 +5,7 @@
     --cor-principal: #6b2d5c;
     --cor-hover: #9b4d83;
     --cor-card: #ffffff;
+    --cor-menu: #42203b;
 }
 
 * {
@@ -49,19 +50,24 @@ button {
     cursor: pointer;
     font-size: 19px;
     margin-top: 20px;
+    transition: 0.3s;
 }
 
 button:hover {
     opacity: 0.85;
+    transform: scale(1.03);
 }
 
+/* MENU */
+
 nav {
-    background-color: #42203b;
+    background-color: var(--cor-menu);
     padding: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
+    transition: 0.3s;
 }
 
 nav a {
@@ -69,11 +75,14 @@ nav a {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #e9b9dc;
 }
+
+/* CONTEÚDO */
 
 main {
     width: 90%;
@@ -87,6 +96,7 @@ section {
     margin-bottom: 30px;
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
 }
 
 h2 {
@@ -117,6 +127,8 @@ section img {
     border-radius: 12px;
 }
 
+/* CURTIDAS */
+
 .curtir {
     display: block;
     width: fit-content;
@@ -124,17 +136,27 @@ section img {
     padding: 16px 30px;
     font-size: 22px;
     font-weight: bold;
+    background-color: #6b2d5c;
 }
+
+.curtir.curtido {
+    background-color: #b21f35;
+}
+
+/* CURIOSIDADES */
 
 .card {
     background-color: var(--cor-fundo);
     padding: 25px;
     margin: 20px 0;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
+/* RODAPÉ */
+
 footer {
-    background-color: #42203b;
+    background-color: var(--cor-menu);
     color: white;
     text-align: center;
     padding: 25px;
@@ -144,17 +166,68 @@ footer p {
     font-size: 18px;
 }
 
+/* MODO ESCURO */
+
 body.escuro {
-    --cor-fundo: #222222;
-    --cor-texto: #ffffff;
-    --cor-card: #333333;
-    --cor-principal: #c17bab;
-    --cor-hover: #9b4d83;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.escuro header {
+    background-color: #292929;
+}
+
+body.escuro nav {
+    background-color: #111111;
+}
+
+body.escuro nav a {
+    color: white;
+}
+
+body.escuro nav a:hover {
+    color: #d89ac5;
+}
+
+body.escuro section {
+    background-color: #333333;
+    color: white;
+}
+
+body.escuro section h2,
+body.escuro section h3 {
+    color: #d89ac5;
+}
+
+body.escuro section p {
+    color: white;
 }
 
 body.escuro .card {
     background-color: #444444;
 }
+
+body.escuro footer {
+    background-color: #111111;
+}
+
+body.escuro .btn-tema {
+    background-color: white;
+    color: #222222;
+}
+
+/* TRANSIÇÃO */
+
+body,
+header,
+nav,
+section,
+.card,
+footer {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* CELULAR */
 
 @media (max-width: 600px) {
     header h1 {
