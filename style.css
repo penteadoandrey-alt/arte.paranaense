@@ -6,7 +6,6 @@
     --cor-titulo: #1684b7;
     --cor-menu: #00365f;
     --cor-superficie: #ffffff;
-    --cor-borda: #dddddd;
 }
 
 * {
@@ -80,7 +79,7 @@ section {
 
 section h2 {
     color: var(--cor-titulo);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-size: 25px;
 }
 
@@ -97,7 +96,7 @@ section img {
     height: 380px;
     object-fit: cover;
     border-radius: 10px;
-    margin: 15px auto;
+    margin: 15px auto 8px;
 }
 
 .curtir {
@@ -107,7 +106,7 @@ section img {
     border: 1px solid #aaaaaa;
     border-radius: 8px;
     padding: 5px 12px;
-    margin-bottom: 10px;
+    margin: 0 0 12px 0;
     cursor: pointer;
     font-size: 15px;
     transition: 0.2s;
